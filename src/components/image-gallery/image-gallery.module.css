@@ -1,0 +1,12 @@
+@value tablet-up from './../../breakpoints.css';
+
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@media screen and (tablet-up), print {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}

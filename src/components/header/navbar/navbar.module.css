@@ -1,0 +1,53 @@
+@value desktop-up from './../../../breakpoints.css';
+
+.nav {
+  display: none;
+}
+
+.navIsActive {
+  display: block;
+}
+
+.menu {
+  display: block;
+}
+
+.item {
+  display: block;
+  line-height: 2;
+  background-color: var(--s-color-neutral-400);
+  margin-bottom: 1px;
+  text-align: center;
+  position: relative;
+  letter-spacing: 1.5px;
+  font-size: 20px;
+}
+
+.itemActive {
+  color: var(--s-link-color-active);
+}
+
+@media screen and (desktop-up) {
+  .nav,
+  .navIsActive {
+    display: block;
+    margin-left: auto;
+  }
+
+  .menu {
+    display: flex;
+    min-height: 3.25rem;
+  }
+
+  .item {
+    align-self: flex-end;
+    line-height: 1.5;
+    padding: 0.5rem 0.3rem;
+    margin: 0;
+    background-color: transparent;
+  }
+
+  .item:last-child {
+    padding-right: 0;
+  }
+}

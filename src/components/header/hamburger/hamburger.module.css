@@ -1,0 +1,83 @@
+@value desktop-up from './../../../breakpoints.css';
+
+.hamburger {
+  height: 30px;
+  width: 30px;
+  padding: 4px 4px;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: none;
+  background-color: var(--s-color-neutral-400);
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover,
+.hamburgerActive:hover {
+  background-color: var(--s-color-neutral-300);
+}
+
+.hamburgerBox {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburgerContent {
+  display: block;
+  top: 50%;
+}
+.hamburgerContent,
+.hamburgerContent::before,
+.hamburgerContent::after {
+  width: 20px;
+  height: 3px;
+  background-color: #000;
+  position: absolute;
+}
+.hamburgerContent::before,
+.hamburgerContent::after {
+  content: '';
+  display: block;
+}
+.hamburgerContent::before {
+  top: -6px;
+}
+.hamburgerContent::after {
+  bottom: -6px;
+}
+
+.hamburgerContent {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.hamburgerContent::before,
+.hamburgerContent::after {
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburgerContentActive {
+  background-color: transparent !important;
+  transform: rotateY(180deg);
+}
+
+.hamburgerContentActive,
+.hamburgerContentActive::before,
+.hamburgerContentActive::after {
+  background-color: #000;
+}
+
+.hamburgerContentActive::before {
+  transform: translateX(0) translateY(6px) translateZ(0) rotate(45deg);
+}
+.hamburgerContentActive::after {
+  transform: translateX(0) translateY(-6px) translateZ(0) rotate(-45deg);
+}
+
+@media screen and (desktop-up) {
+  .hamburger {
+    display: none;
+  }
+}

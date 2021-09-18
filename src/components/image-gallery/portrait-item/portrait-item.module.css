@@ -1,0 +1,40 @@
+.card {
+  position: relative;
+  padding-top: 133.3333%;
+  margin: 0;
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 45%),
+    0 0 0 1px rgb(10 10 10 / 1%);
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  opacity: 0;
+  background: #030303;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.overlay:hover,
+.overlay:focus {
+  opacity: 0.5;
+}

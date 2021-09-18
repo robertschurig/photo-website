@@ -1,0 +1,34 @@
+@value breakpoints: './../../breakpoints.css';
+@value tablet-up, desktop-up, widescreen-up, fullhd-up from breakpoints;
+
+.container {
+  margin: 0 auto;
+}
+
+main {
+  margin: 15px 0;
+}
+
+@media screen and (tablet-up) {
+  .container {
+    max-width: 769px;
+  }
+}
+
+@media screen and (desktop-up) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (widescreen-up) {
+  .container {
+    max-width: 1216px;
+  }
+}
+
+@media screen and (fullhd-up) {
+  .container {
+    max-width: 1408px;
+  }
+}

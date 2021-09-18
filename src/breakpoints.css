@@ -1,0 +1,4 @@
+@value tablet-up: min-width: 769px;
+@value desktop-up: min-width: 1024px;
+@value widescreen-up: min-width: 1216px;
+@value fullhd-up: min-width: 1408px;

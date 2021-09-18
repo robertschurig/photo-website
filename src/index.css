@@ -1,0 +1,148 @@
+/* defaults, reset */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Helvetica', 'Arial', sans-serif;
+}
+
+html {
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1em;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* variables */
+:root {
+  --s-color-neutral-100: #f2f2f2;
+  --s-color-neutral-200: #d2d2d2;
+  --s-color-neutral-300: #808080;
+  --s-color-neutral-400: #4c4c4c;
+  --s-color-neutral-500: #1f1f1f;
+
+  --s-color-neutral-500-alpha-3: rgb(31, 31, 31, 0.3);
+
+  --s-color-accent-200: #69b7fc;
+  --s-color-accent-400: #0476d9;
+  --s-color-accent-300-alpha-5: rgba(2, 110, 204, 0.5);
+
+  --s-text-color: var(--s-color-neutral-500);
+  --s-bg-color: var(--s-color-neutral-200);
+
+  --s-image-lightbox-bg-color: var(--s-color-neutral-500);
+  --s-image-lightbox-close-button-bg-color: var(--s-color-neutral-500-alpha-3);
+
+  --s-link-color: var(--s-color-neutral-500);
+  --s-link-color-hover: var(--s-color-accent-400);
+  --s-link-color-active: var(--s-color-accent-400);
+  --s-link-color-focus: var(--s-color-accent-300-alpha-5);
+}
+
+[data-theme='dark'] {
+  --s-text-color: var(--s-color-neutral-200);
+  --s-bg-color: var(--s-color-neutral-500);
+
+  --s-link-color: var(--s-color-neutral-200);
+  --s-link-color-hover: var(--s-color-accent-200);
+  --s-link-color-active: var(--s-color-accent-200);
+  --s-link-color-focus: var(--s-color-accent-300-alpha-5);
+}
+
+body {
+  color: var(--s-text-color, fuchsia);
+  background-color: var(--s-bg-color, fuchsia);
+}
+
+a {
+  color: var(--s-link-color, fuchsia);
+}
+
+a:hover,
+a:focus {
+  color: var(--s-link-color-hover, fuchsia);
+}
+
+a:active {
+  color: var(--s-link-color-active, fuchsia);
+}
+
+a:focus,
+button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  box-shadow: 0 0 0 3px var(--s-link-color-focus, fuchsia);
+  outline: none;
+}
+
+#appMountPoint {
+  outline: none;
+}

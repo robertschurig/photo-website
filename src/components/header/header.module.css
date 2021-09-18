@@ -1,0 +1,35 @@
+@value desktop-up from './../../breakpoints.css';
+
+.container {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.brandlink {
+  display: block;
+  line-height: 1.5;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+@media screen and (desktop-up) {
+  .container {
+    margin-top: 25px;
+    flex-direction: row;
+  }
+
+  .brandlink {
+    font-size: 2rem;
+  }
+}
