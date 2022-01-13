@@ -17,8 +17,11 @@ export const NavBar = ({ isActive, onItemClick }: Props) => {
         <li>
           <NavLink
             to="/portraits"
-            activeClassName={styles.itemActive}
-            className={styles.item}
+            // activeClassName={styles.itemActive}
+            // className={styles.item}
+            className={({ isActive }) =>
+              styles.item + ' ' + (isActive ? styles.itemActive : '')
+            }
             onClick={() => onItemClick()}
           >
             Portrait
@@ -27,8 +30,11 @@ export const NavBar = ({ isActive, onItemClick }: Props) => {
         <li>
           <NavLink
             to="/sports"
-            activeClassName={styles.itemActive}
-            className={styles.item}
+            // activeClassName={styles.itemActive}
+            // className={styles.item}
+            className={({ isActive }) =>
+              styles.item + ' ' + (isActive ? styles.itemActive : '')
+            }
             onClick={() => onItemClick()}
           >
             Sports
@@ -37,8 +43,11 @@ export const NavBar = ({ isActive, onItemClick }: Props) => {
         <li>
           <NavLink
             to="/contact"
-            activeClassName={styles.itemActive}
-            className={styles.item}
+            // activeClassName={styles.itemActive}
+            // className={styles.item}
+            className={({ isActive }) =>
+              styles.item + ' ' + (isActive ? styles.itemActive : '')
+            }
             onClick={() => onItemClick()}
           >
             Contact
