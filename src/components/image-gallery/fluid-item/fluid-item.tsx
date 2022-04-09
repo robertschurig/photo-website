@@ -1,7 +1,7 @@
 import styles from './fluid-item.module.css';
 
 type Props = {
-  data: any;
+  data: { id: string; source: string; title: string };
   onSelected?: (id: string) => void;
 };
 

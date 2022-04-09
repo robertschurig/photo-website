@@ -16,6 +16,7 @@ export const useEventListener = (
       const isSupported = element && element.addEventListener;
       if (!isSupported) return;
 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const eventListener = (event: any) => (savedHandler.current = event);
       element.addEventListener(eventName, eventListener);
 

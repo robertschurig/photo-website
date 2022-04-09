@@ -1,11 +1,17 @@
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ImageData } from '../image-gallery.interface';
 
 import styles from './portrait-item.module.css';
 
-export const PortraitItem = ({ data, onSelected }: any) => {
+type Props = {
+  data: ImageData;
+  onSelected: (id: string) => void;
+};
+
+export const PortraitItem = ({ data, onSelected }: Props) => {
   const keyPressHandler = ({ key }: { key: string }) => {
-    if (key !== "Enter") {
+    if (key !== 'Enter') {
       return;
     }
 

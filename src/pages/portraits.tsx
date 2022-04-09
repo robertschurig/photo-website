@@ -1,11 +1,12 @@
 import { ImageGallery } from 'components';
+import { ImageData } from 'components/image-gallery/image-gallery.interface';
 import { ImageModal } from 'components/image-gallery/modal/image-modal';
 import { PortraitItem } from 'components/image-gallery/portrait-item';
 import { useFetch } from 'hooks';
 import { useState } from 'react';
 
 export const Portraits = () => {
-  const [data] = useFetch<any[]>("images/portraits/index.json");
+  const [data] = useFetch<ImageData[]>('images/portraits/index.json');
   const [selectedImageId, setSelectedImageId] = useState<string | null>();
 
   const imageClickedHandler = (id: string) => setSelectedImageId(id);

@@ -1,4 +1,5 @@
 import { ImageGallery } from 'components';
+import { ImageData } from 'components/image-gallery/image-gallery.interface';
 import { ImageModal } from 'components/image-gallery/modal/image-modal';
 import { PortraitItem } from 'components/image-gallery/portrait-item';
 import { useFetch } from 'hooks';
@@ -6,8 +7,8 @@ import { useEffect, useState } from 'react';
 
 export const Home = () => {
   const [selectedImageId, setSelectedImageId] = useState<string | undefined>();
-  const [items, setItems] = useState<any[]>();
-  const [data] = useFetch<any[]>('images/portraits/index.json');
+  const [items, setItems] = useState<ImageData[]>();
+  const [data] = useFetch<ImageData[]>('images/portraits/index.json');
 
   const imageClickedHandler = (id: string) => setSelectedImageId(id);
   const imageOverlayCloseHandler = () => setSelectedImageId(undefined);

@@ -7,9 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ImageData } from '../image-gallery.interface';
 import styles from './image-modal.module.css';
 
-const ESCAPE_KEYS = ["27", "Escape"];
-const ARROW_LEFT_KEYS = ["37", "ArrowLeft"];
-const ARROW_RIGHT_KEYS = ["39", "ArrowRight"];
+const ESCAPE_KEYS = ['27', 'Escape'];
+const ARROW_LEFT_KEYS = ['37', 'ArrowLeft'];
+const ARROW_RIGHT_KEYS = ['39', 'ArrowRight'];
 
 type Props = {
   imageList: ImageData[];
@@ -55,7 +55,7 @@ export const ImageModal = (props: Props) => {
     setCurrentImageIdx(selectedImageIndex);
   };
 
-  useEventListener("keydown", keydownHandler);
+  useEventListener('keydown', keydownHandler);
   useEffect(() => {
     if (!imageList || !selectedImageId) {
       return;
@@ -69,7 +69,7 @@ export const ImageModal = (props: Props) => {
 
   return currentImage ? (
     <div
-      className={`${styles.container}${isActive ? ` ${styles.isActive}` : ""}`}
+      className={`${styles.container}${isActive ? ` ${styles.isActive}` : ''}`}
     >
       <div className={styles.background}></div>
       <div className={styles.imageContainer}>
