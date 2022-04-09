@@ -1,4 +1,4 @@
-@value breakpoints: './../../breakpoints.css';
+@value breakpoints: './../breakpoints.css';
 @value tablet-up, desktop-up, widescreen-up, fullhd-up from breakpoints;
 
 .container {
