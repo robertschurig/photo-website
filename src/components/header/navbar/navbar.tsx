@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+
 import styles from './navbar.module.css';
 
 type Props = {

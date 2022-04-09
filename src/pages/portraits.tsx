@@ -1,8 +1,8 @@
-import { useFetch } from "hooks";
-import { ImageGallery } from "components";
-import { useState } from "react";
-import { PortraitItem } from "components/image-gallery/portrait-item";
-import { ImageModal } from "components/image-gallery/modal/image-modal";
+import { ImageGallery } from 'components';
+import { ImageModal } from 'components/image-gallery/modal/image-modal';
+import { PortraitItem } from 'components/image-gallery/portrait-item';
+import { useFetch } from 'hooks';
+import { useState } from 'react';
 
 export const Portraits = () => {
   const [data] = useFetch<any[]>("images/portraits/index.json");

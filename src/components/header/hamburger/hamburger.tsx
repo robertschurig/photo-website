@@ -1,4 +1,4 @@
-import styles from "./hamburger.module.css";
+import styles from './hamburger.module.css';
 
 export const Hamburger = ({ isActive, onClick }: any) => {
   return (

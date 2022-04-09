@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
 import { ImageGallery } from 'components';
-import { useFetch } from 'hooks';
-import { PortraitItem } from 'components/image-gallery/portrait-item';
 import { ImageModal } from 'components/image-gallery/modal/image-modal';
+import { PortraitItem } from 'components/image-gallery/portrait-item';
+import { useFetch } from 'hooks';
+import { useEffect, useState } from 'react';
 
 export const Home = () => {
   const [selectedImageId, setSelectedImageId] = useState<string | undefined>();

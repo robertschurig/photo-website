@@ -1,4 +1,4 @@
-import styles from "./fluid-item.module.css";
+import styles from './fluid-item.module.css';
 
 type Props = {
   data: any;

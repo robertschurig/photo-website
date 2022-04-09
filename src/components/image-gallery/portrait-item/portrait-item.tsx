@@ -1,6 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import styles from "./portrait-item.module.css";
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import styles from './portrait-item.module.css';
 
 export const PortraitItem = ({ data, onSelected }: any) => {
   const keyPressHandler = ({ key }: { key: string }) => {

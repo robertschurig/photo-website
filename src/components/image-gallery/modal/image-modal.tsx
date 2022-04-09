@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { useEventListener } from 'hooks';
+import { useEffect, useState } from 'react';
 
-import { ImageData } from "../image-gallery.interface";
-import { useEventListener } from "hooks";
-import styles from "./image-modal.module.css";
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { ImageData } from '../image-gallery.interface';
+import styles from './image-modal.module.css';
 
 const ESCAPE_KEYS = ["27", "Escape"];
 const ARROW_LEFT_KEYS = ["37", "ArrowLeft"];

@@ -1,7 +1,7 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-import { Contact, Home, Portraits, Sports } from 'pages';
 import { Header } from 'components/header';
+import { Contact, Home, Portraits, Sports } from 'pages';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import styles from './app.module.css';
 
 export const App = () => (
