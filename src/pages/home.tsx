@@ -1,5 +1,5 @@
-import { ImgGrid, PortraitItem, ImageModal } from 'components';
-import { ImageData } from 'components/img-grid/images.interface';
+import { Images, PortraitItem, ImageModal } from 'components';
+import { ImageData } from 'components/images.interface';
 import { useFetch } from 'hooks';
 import { useEffect, useState } from 'react';
 
@@ -21,7 +21,7 @@ export const Home = () => {
   return (
     <>
       {items && (
-        <ImgGrid>
+        <Images>
           {items.map((imageData) => (
             <PortraitItem
               key={imageData.id}
@@ -29,7 +29,7 @@ export const Home = () => {
               onSelected={imageClickedHandler}
             />
           ))}
-        </ImgGrid>
+        </Images>
       )}
 
       {selectedImageId && items && (
