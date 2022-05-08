@@ -1,8 +1,8 @@
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ImageData } from '../image-gallery.interface';
+import { ImageData } from './images.interface';
 
-import styles from './portrait-item.module.css';
+import styles from './portrait.module.css';
 
 type Props = {
   data: ImageData;

@@ -2,8 +2,8 @@
 // import { useState } from "react";
 
 // import { ImageGallery } from "components";
-// import { FluidItem } from "components/image-gallery/fluid-item";
-// import { ImageModal } from "components/image-gallery/modal/image-modal";
+// import { FluidItem } from "components/img-grid/fluid-item";
+// import { ImageModal } from "components/img-grid/modal/image-modal";
 
 export const Sports = () => {
   // const [imageList] = useFetch("images/istaf-2016/index.json");
