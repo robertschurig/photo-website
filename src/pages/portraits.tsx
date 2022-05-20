@@ -1,5 +1,6 @@
-import { Images, PortraitItem, ImageModal } from 'components';
+import { Images, PortraitItem } from 'components';
 import { ImageData } from 'components/images.interface';
+import { Modal2 } from 'components/img-modal2/modal2';
 import { useFetch } from 'hooks';
 import { useState } from 'react';
 
@@ -25,9 +26,9 @@ export const Portraits = () => {
       )}
 
       {selectedImageId && data && (
-        <ImageModal
+        <Modal2
+          images={data}
           selectedImageId={selectedImageId}
-          imageList={data}
           onCloseClicked={imageOverlayCloseHandler}
         />
       )}

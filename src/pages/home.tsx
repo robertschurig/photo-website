@@ -1,28 +1,29 @@
-import { Images, PortraitItem, ImageModal } from 'components';
+import { Images, PortraitItem } from 'components';
 import { ImageData } from 'components/images.interface';
+import { Modal2 } from 'components/img-modal2/modal2';
 import { useFetch } from 'hooks';
 import { useEffect, useState } from 'react';
 
 export const Home = () => {
   const [selectedImageId, setSelectedImageId] = useState<string | undefined>();
-  const [items, setItems] = useState<ImageData[]>();
+  const [images, setImages] = useState<ImageData[]>();
   const [data] = useFetch<ImageData[]>('images/portraits/index.json');
 
   const imageClickedHandler = (id: string) => setSelectedImageId(id);
-  const imageOverlayCloseHandler = () => setSelectedImageId(undefined);
+  const modalCloseHandler = () => setSelectedImageId(undefined);
 
   useEffect(() => {
     if (data) {
-      const items = data.slice(0, 8);
-      setItems(items);
+      // just take the latest 8
+      setImages(data.slice(0, 8));
     }
   }, [data]);
 
   return (
     <>
-      {items && (
+      {images && (
         <Images>
-          {items.map((imageData) => (
+          {images.map((imageData) => (
             <PortraitItem
               key={imageData.id}
               data={imageData}
@@ -32,11 +33,11 @@ export const Home = () => {
         </Images>
       )}
 
-      {selectedImageId && items && (
-        <ImageModal
+      {selectedImageId && images && (
+        <Modal2
+          images={images}
           selectedImageId={selectedImageId}
-          imageList={items}
-          onCloseClicked={imageOverlayCloseHandler}
+          onCloseClicked={modalCloseHandler}
         />
       )}
     </>
