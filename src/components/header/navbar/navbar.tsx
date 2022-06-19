@@ -7,6 +7,9 @@ type Props = {
   onItemClick: () => void;
 };
 
+const linkStyle = ({ isActive }: { isActive: boolean }) =>
+  styles.item + ' ' + (isActive ? styles.itemActive : '');
+
 export const NavBar = ({ isActive, onItemClick }: Props) => {
   return (
     <nav
@@ -17,12 +20,8 @@ export const NavBar = ({ isActive, onItemClick }: Props) => {
       <ul className={styles.menu} aria-label="website pages">
         <li>
           <NavLink
-            to="/portraits"
-            // activeClassName={styles.itemActive}
-            // className={styles.item}
-            className={({ isActive }) =>
-              styles.item + ' ' + (isActive ? styles.itemActive : '')
-            }
+            to="/portrait"
+            className={linkStyle}
             onClick={() => onItemClick()}
           >
             Portrait
@@ -30,25 +29,26 @@ export const NavBar = ({ isActive, onItemClick }: Props) => {
         </li>
         <li>
           <NavLink
-            to="/sports"
-            // activeClassName={styles.itemActive}
-            // className={styles.item}
-            className={({ isActive }) =>
-              styles.item + ' ' + (isActive ? styles.itemActive : '')
-            }
+            to="/art"
+            className={linkStyle}
             onClick={() => onItemClick()}
           >
-            Sports
+            Art(18+)
           </NavLink>
         </li>
+        {/* <li>
+          <NavLink
+            to="/sport"
+            className={isActiveElement}
+            onClick={() => onItemClick()}
+          >
+            Sport
+          </NavLink>
+        </li> */}
         <li>
           <NavLink
             to="/contact"
-            // activeClassName={styles.itemActive}
-            // className={styles.item}
-            className={({ isActive }) =>
-              styles.item + ' ' + (isActive ? styles.itemActive : '')
-            }
+            className={linkStyle}
             onClick={() => onItemClick()}
           >
             Contact

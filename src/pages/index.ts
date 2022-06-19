@@ -1,4 +1,4 @@
 export * from './home';
-export * from './portraits';
-export * from './sports';
+export * from './portrait';
+export * from './sport';
 export * from './contact';

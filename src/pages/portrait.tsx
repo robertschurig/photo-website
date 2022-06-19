@@ -4,7 +4,7 @@ import { Modal2 } from 'components/img-modal2/modal2';
 import { useFetch } from 'hooks';
 import { useState } from 'react';
 
-export const Portraits = () => {
+export const Portrait = () => {
   const [data] = useFetch<ImageData[]>('images/portraits/index.json');
   const [selectedImageId, setSelectedImageId] = useState<string | null>();
 
