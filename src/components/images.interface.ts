@@ -1,4 +1,8 @@
+interface ImgSources {
+  [index: string]: { src: string; thumb: string };
+}
+
 export interface ImageData {
   id: string;
-  source: string;
+  sources: ImgSources;
 }

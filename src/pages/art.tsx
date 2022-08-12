@@ -5,7 +5,7 @@ import { Outlet, useNavigate } from 'react-router';
 
 export const Art = () => {
   const navigate = useNavigate();
-  const [images] = useFetch<ImageData[]>('/images/art/white blur/index.json');
+  const [images] = useFetch<ImageData[]>('/images/white-blur/index.json');
 
   const imageClickedHandler = (id: string) => {
     navigate(`/art/${id}`);

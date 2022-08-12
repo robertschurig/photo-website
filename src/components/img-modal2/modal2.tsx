@@ -70,11 +70,13 @@ export const Modal2 = () => {
 
         {currentImage && (
           <div className={styles.slide}>
-            <img
-              alt={currentImage.id}
-              src={currentImage.source}
-              loading="lazy"
-            />
+            <picture>
+              <source
+                srcSet={currentImage.sources['avif'].src}
+                type="image/avif"
+              />
+              <img src={currentImage.sources['jpg'].src} loading="lazy" />
+            </picture>
           </div>
         )}
       </div>

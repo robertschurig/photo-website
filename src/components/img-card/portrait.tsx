@@ -14,7 +14,15 @@ export const PortraitItem = ({ data, onSelected }: Props) => {
       className={styles.card}
       onClick={() => onSelected(data.id)}
     >
-      <img src={data.source} alt="image_2" aria-hidden="true" loading="lazy" />
+      <picture>
+        <source srcSet={data.sources['avif'].thumb} type="image/avif" />
+        <img
+          src={data.sources['jpg'].thumb}
+          alt="image_2"
+          aria-hidden="true"
+          loading="lazy"
+        />
+      </picture>
       <div className={styles.content}>&#x2795;</div>
     </button>
   );
