@@ -1,37 +1,28 @@
 import { Images, PortraitItem } from 'components';
 import { ImageData } from 'components/images.interface';
-import { Modal2 } from 'components/img-modal2/modal2';
 import { useFetch } from 'hooks';
-import { useState } from 'react';
+import { Outlet, useNavigate } from 'react-router';
 
 export const Portrait = () => {
-  const [data] = useFetch<ImageData[]>('images/portraits/index.json');
-  const [selectedImageId, setSelectedImageId] = useState<string | null>();
+  const navigate = useNavigate();
+  const [images] = useFetch<ImageData[]>('/images/portraits/index.json');
 
-  const imageClickedHandler = (id: string) => setSelectedImageId(id);
-  const imageOverlayCloseHandler = () => setSelectedImageId(null);
+  const imageClickedHandler = (id: string) => {
+    navigate(`/portrait/${id}`);
+  };
 
   return (
     <>
-      {data && (
-        <Images>
-          {data.map((imageData) => (
-            <PortraitItem
-              key={imageData.id}
-              data={imageData}
-              onSelected={imageClickedHandler}
-            />
-          ))}
-        </Images>
-      )}
-
-      {selectedImageId && data && (
-        <Modal2
-          images={data}
-          selectedImageId={selectedImageId}
-          onCloseClicked={imageOverlayCloseHandler}
-        />
-      )}
+      <Images>
+        {images?.map((img) => (
+          <PortraitItem
+            key={img.id}
+            data={img}
+            onSelected={imageClickedHandler}
+          />
+        ))}
+      </Images>
+      <Outlet context={{ images }} />
     </>
   );
 };
