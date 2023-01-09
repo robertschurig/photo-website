@@ -30,7 +30,7 @@
     "eslint-plugin-react-hooks": "^4.5.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
-    "postcss": "^8.4.13",
+    "postcss": "^8.4.21",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-loader": "^7.0.0",
     "postcss-normalize": "^10.0.1",
