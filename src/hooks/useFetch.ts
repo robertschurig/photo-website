@@ -7,15 +7,17 @@ export const useFetch = <S = undefined>(
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const fetchUrl = async () => {
+    async function fetchUrl(): Promise<void> {
       const response = await fetch(url);
-      const json = await response.json();
+      const json = response.json() as Promise<S | undefined>;
 
-      setData(json);
+      setData(await json);
       setLoading(false);
-    };
+    }
 
-    fetchUrl();
+    fetchUrl().catch(() => {
+      //...
+    });
   }, [url]);
 
   return [data, loading];

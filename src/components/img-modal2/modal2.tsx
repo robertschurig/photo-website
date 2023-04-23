@@ -1,6 +1,5 @@
 import { ImageData } from 'components/images.interface';
 import { useEventListener } from 'hooks';
-import { useMemo } from 'react';
 import { useNavigate, useOutletContext, useParams } from 'react-router';
 import styles from './modal2.module.css';
 
@@ -19,6 +18,19 @@ export const Modal2 = () => {
 
   const navigateToParent = () => {
     navigate('../');
+  };
+
+  const nextImage = () => {
+    const nextIndex = currentImageIdx + 1;
+    const selectedImageIndex = nextIndex === images.length ? 0 : nextIndex;
+
+    navigate('../' + images[selectedImageIndex].id);
+  };
+  const prevImage = () => {
+    const nextIndex = currentImageIdx - 1;
+    const selectedImageIndex = nextIndex < 0 ? images.length - 1 : nextIndex;
+
+    navigate('../' + images[selectedImageIndex].id);
   };
 
   const keydownHandler = (event: Event) => {
@@ -41,19 +53,6 @@ export const Modal2 = () => {
     }
   };
 
-  const nextImage = () => {
-    const nextIndex = currentImageIdx + 1;
-    const selectedImageIndex = nextIndex === images.length ? 0 : nextIndex;
-
-    navigate('../' + images[selectedImageIndex].id);
-  };
-  const prevImage = () => {
-    const nextIndex = currentImageIdx - 1;
-    const selectedImageIndex = nextIndex < 0 ? images.length - 1 : nextIndex;
-
-    navigate('../' + images[selectedImageIndex].id);
-  };
-
   useEventListener('keydown', keydownHandler);
 
   const currentImage = images?.[currentImageIdx];
@@ -72,10 +71,10 @@ export const Modal2 = () => {
           <div className={styles.slide}>
             <picture>
               <source
-                srcSet={currentImage.sources['avif'].src}
+                srcSet={currentImage.sources.avif.src}
                 type="image/avif"
               />
-              <img src={currentImage.sources['jpg'].src} loading="lazy" />
+              <img src={currentImage.sources.jpg.src} loading="lazy" />
             </picture>
           </div>
         )}
