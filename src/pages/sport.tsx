@@ -27,14 +27,14 @@ export const Sports = () => {
     //     </ImageGallery>
     //   )}
 
-  //   {selectedImageId && (
-  //     <ImageModal
-  //       selectedImageId={selectedImageId}
-  //       imageList={imageList}
-  //       onCloseClicked={imageOverlayCloseHandler}
-  //     />
-  //   )}
-  // </>
+    //   {selectedImageId && (
+    //     <ImageModal
+    //       selectedImageId={selectedImageId}
+    //       imageList={imageList}
+    //       onCloseClicked={imageOverlayCloseHandler}
+    //     />
+    //   )}
+    // </>
   );
 
   // return (

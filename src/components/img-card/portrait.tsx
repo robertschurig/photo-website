@@ -1,6 +1,6 @@
-import { ImageData } from '../images.interface';
+import { ImageData } from "../images.interface";
 
-import styles from './portrait.module.css';
+import styles from "./portrait.module.css";
 
 type Props = {
   data: ImageData;
@@ -15,9 +15,9 @@ export const PortraitItem = ({ data, onSelected }: Props) => {
       onClick={() => onSelected(data.id)}
     >
       <picture>
-        <source srcSet={data.sources['avif'].thumb} type="image/avif" />
+        <source srcSet={data.sources["avif"].thumb} type="image/avif" />
         <img
-          src={data.sources['jpg'].thumb}
+          src={data.sources["jpg"].thumb}
           alt="image_2"
           aria-hidden="true"
           loading="lazy"
