@@ -9,11 +9,7 @@ type Props = {
 
 export const PortraitItem = ({ data, onSelected }: Props) => {
   return (
-    <button
-      tabIndex={0}
-      className={styles.card}
-      onClick={() => onSelected(data.id)}
-    >
+    <button className={styles.card} onClick={() => onSelected(data.id)}>
       <picture>
         <source srcSet={data.sources.avif.thumb} type="image/avif" />
         <img
