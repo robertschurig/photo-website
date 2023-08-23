@@ -19,7 +19,7 @@ export const PortraitItem = ({ data, onSelected }: Props) => {
           loading="lazy"
         />
       </picture>
-      <div className={styles.content}>&#x2795;</div>
+      <div className={styles.overlay}>&#x2B;</div>
     </button>
   );
 };

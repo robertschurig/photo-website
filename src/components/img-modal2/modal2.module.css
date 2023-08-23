@@ -13,7 +13,7 @@
   height: 100vh;
   position: relative;
 
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 
   background-color: var(--s-image-lightbox-bg-color);
@@ -30,7 +30,7 @@
   align-items: center;
 }
 
-.slide > img {
+.slide img {
   display: block;
 
   max-width: 100vw;
