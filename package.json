@@ -6,7 +6,8 @@
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint src"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -17,23 +18,15 @@
   "devDependencies": {
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^7.1.0",
     "@vitejs/plugin-react-swc": "^3.6.0",
     "eslint": "^8.57.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.1.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react": "^7.34.1",
+    "globals": "^15.0.0",
     "path": "^0.12.7",
     "prettier": "^3.2.5",
     "rollup-plugin-license": "^3.2.0",
     "typescript": "^5.3.3",
+    "typescript-eslint": "^7.7.0",
     "vite": "^5.1.4",
     "vite-plugin-checker": "^0.6.4",
     "vite-tsconfig-paths": "^4.3.1"
