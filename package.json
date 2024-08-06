@@ -10,26 +10,26 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-router": "^6.10.0",
-    "react-router-dom": "^6.22.2"
+    "react-router-dom": "^6.26.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.61",
-    "@types/react-dom": "^18.2.19",
-    "@vitejs/plugin-react-swc": "^3.6.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.1",
-    "globals": "^15.0.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react-swc": "^3.7.0",
+    "eslint": "^8.7.5",
+    "eslint-plugin-react": "^7.35.0",
+    "globals": "^15.9.0",
     "path": "^0.12.7",
-    "prettier": "^3.2.5",
-    "rollup-plugin-license": "^3.2.0",
-    "typescript": "^5.3.3",
-    "typescript-eslint": "^7.7.0",
-    "vite": "^5.1.4",
-    "vite-plugin-checker": "^0.6.4",
-    "vite-tsconfig-paths": "^4.3.1"
+    "prettier": "^3.3.3",
+    "rollup-plugin-license": "^3.5.2",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^7.18.0",
+    "vite": "^5.3.5",
+    "vite-plugin-checker": "^0.7.2",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "browserslist": [
     "defaults and supports es6-module"
