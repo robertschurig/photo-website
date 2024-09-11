@@ -1,5 +1,5 @@
 import path from 'path';
-import { defineConfig, splitVendorChunkPlugin } from 'vite';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import license from 'rollup-plugin-license';
@@ -10,7 +10,6 @@ export default defineConfig({
   plugins: [
     react(),
     tsconfigPaths(),
-    splitVendorChunkPlugin(),
     checker({
       typescript: true,
       eslint: {
@@ -23,31 +22,31 @@ export default defineConfig({
       },
     }),
   ],
-  // build: {
-  //   rollupOptions: {
-  //     output: {
-  //       manualChunks: {
-  //         vendor: ["react", "react-router-dom", "react-dom"],
-  //         ...renderChunks(dependencies),
-  //       },
-  //     },
-  //   },
-  // },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-router-dom', 'react-dom'],
+          ...renderChunks(dependencies),
+        },
+      },
+    },
+  },
   esbuild: {
     banner: '/*! licenses: /assets/vendor.LICENSE.txt */',
     legalComments: 'none',
   },
 });
 
-// import { dependencies } from "./package.json";
+import { dependencies } from './package.json';
 
-// function renderChunks(deps: Record<string, string>) {
-//   const chunks = {};
+function renderChunks(deps: Record<string, string>) {
+  const chunks = {};
 
-//   Object.keys(deps).forEach((key) => {
-//     if (["react", "react-router-dom", "react-dom"].includes(key)) return;
-//     chunks[key] = [key];
-//   });
+  Object.keys(deps).forEach((key) => {
+    if (['react', 'react-router-dom', 'react-dom'].includes(key)) return;
+    chunks[key] = [key];
+  });
 
-//   return chunks;
-// }
+  return chunks;
+}
