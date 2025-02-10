@@ -1,7 +1,8 @@
-import { Images, PortraitItem } from 'components';
-import { ImageData } from 'components/images.interface';
-import { useFetch } from 'hooks';
 import { Outlet, useNavigate } from 'react-router';
+
+import { Images, PortraitItem } from '../components';
+import { ImageData } from '../components/images.interface';
+import { useFetch } from '../hooks';
 
 export const Art = () => {
   const navigate = useNavigate();

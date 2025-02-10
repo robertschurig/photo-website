@@ -1,6 +1,7 @@
-import { ImageData } from 'components/images.interface';
-import { useEventListener } from 'hooks';
 import { useNavigate, useOutletContext, useParams } from 'react-router';
+
+import { ImageData } from '../../components/images.interface';
+import { useEventListener } from '../../hooks';
 import styles from './modal2.module.css';
 
 const ESCAPE_KEYS = ['27', 'Escape'];
@@ -71,10 +72,10 @@ export const Modal2 = () => {
           <div className={styles.slide}>
             <picture>
               <source
-                srcSet={currentImage.sources.avif.src}
+                srcSet={currentImage.source.avif}
                 type="image/avif"
               />
-              <img src={currentImage.sources.jpg.src} loading="lazy" />
+              <img src={currentImage.source.jpg} loading="lazy" />
             </picture>
           </div>
         )}

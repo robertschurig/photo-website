@@ -1,8 +1,10 @@
 interface ImgSources {
-  [index: string]: { src: string; thumb: string };
+  jpg: string;
+  avif: string;
 }
 
 export interface ImageData {
   id: string;
-  sources: ImgSources;
+  source: ImgSources;
+  thumbnail: ImgSources;
 }

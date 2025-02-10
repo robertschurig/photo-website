@@ -1,9 +1,12 @@
-import { Modal2 } from 'components';
-import { Header } from 'components/header';
-import { Contact, Home, Portrait, Art } from 'pages';
+import { Modal2 } from '../components';
+import { Header } from '../components/header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import styles from './app.module.css';
+import { Home } from './home';
+import { Contact } from './contact';
+import { Portrait } from './portrait';
+import { Art } from './art';
 
 export const App = () => (
   <BrowserRouter>
