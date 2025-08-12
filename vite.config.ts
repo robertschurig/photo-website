@@ -18,31 +18,8 @@ export default defineConfig({
       },
     }),
   ],
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-router-dom', 'react-dom'],
-          ...renderChunks(dependencies),
-        },
-      },
-    },
-  },
   esbuild: {
     banner: '/*! licenses: /assets/vendor.LICENSE.txt */',
     legalComments: 'none',
   },
 });
-
-import { dependencies } from './package.json';
-
-function renderChunks(deps: Record<string, string>) {
-  const chunks = {};
-
-  Object.keys(deps).forEach((key) => {
-    if (['react', 'react-router-dom', 'react-dom'].includes(key)) return;
-    chunks[key] = [key];
-  });
-
-  return chunks;
-}

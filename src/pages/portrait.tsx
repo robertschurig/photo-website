@@ -9,7 +9,7 @@ export const Portrait = () => {
   const [images] = useFetch<ImageData[]>('/images/portraits/index.json');
 
   const imageClickedHandler = (id: string) => {
-    navigate(`/portraits/${id}`);
+    navigate(`/portrait/${id}`);
   };
 
   return (
