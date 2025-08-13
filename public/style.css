@@ -157,10 +157,6 @@ button:focus-visible {
   outline: none;
 }
 
-.container {
-  margin: 0 auto;
-}
-
 main {
   margin: 15px 0;
 }
