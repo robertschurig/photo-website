@@ -21,10 +21,10 @@ export const Home = () => {
     navigate(`/${id}`);
   };
 
-  return (
+  return top8Images ? (
     <>
       <Images>
-        {top8Images?.map((img) => (
+        {top8Images.map((img) => (
           <PortraitItem
             key={img.id}
             data={img}
@@ -34,5 +34,5 @@ export const Home = () => {
       </Images>
       <Outlet context={{ images: top8Images }} />
     </>
-  );
+  ) : null;
 };

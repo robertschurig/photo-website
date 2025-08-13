@@ -12,10 +12,10 @@ export const Portrait = () => {
     navigate(`/portrait/${id}`);
   };
 
-  return (
+  return images ? (
     <>
       <Images>
-        {images?.map((img) => (
+        {images.map((img) => (
           <PortraitItem
             key={img.id}
             data={img}
@@ -25,5 +25,5 @@ export const Portrait = () => {
       </Images>
       <Outlet context={{ images }} />
     </>
-  );
+  ) : null;
 };

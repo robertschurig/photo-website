@@ -12,11 +12,11 @@ export const Art = () => {
     navigate(`/art/${id}`);
   };
 
-  return (
+  return images ? (
     <>
       <div>White blur</div>
       <Images>
-        {images?.map((img) => (
+        {images.map((img) => (
           <PortraitItem
             key={img.id}
             data={img}
@@ -26,5 +26,5 @@ export const Art = () => {
       </Images>
       <Outlet context={{ images }} />
     </>
-  );
+  ) : null;
 };

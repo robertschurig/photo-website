@@ -16,7 +16,7 @@ export const PortraitItem = ({ data, onSelected }: Props) => {
           src={data.thumbnail.jpg}
           alt="image_2"
           aria-hidden="true"
-          loading="lazy"
+          fetchPriority="high"
         />
       </picture>
       <div className={styles.overlay}>&#x2B;</div>

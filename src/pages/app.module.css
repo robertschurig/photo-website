@@ -1,14 +1,6 @@
 @value breakpoints: './../breakpoints.css';
 @value tablet-up, desktop-up, widescreen-up, fullhd-up from breakpoints;
 
-.container {
-  margin: 0 auto;
-}
-
-main {
-  margin: 15px 0;
-}
-
 @media screen and (tablet-up) {
   .container {
     max-width: 769px;

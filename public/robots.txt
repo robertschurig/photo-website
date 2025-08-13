@@ -1,0 +1,16 @@
+# robots.txt for https://robertschurig.de/
+
+# Sitemap location
+Sitemap: https://robertschurig.de/sitemap.xml
+
+# Global rule: apply to all crawlers
+User-agent: *
+Allow: /
+
+# (Optional) Block sensitive or unimportant paths
+# Disallow: /private/
+# Disallow: /admin/
+# Disallow: /login/
+
+# (Optional) Prevent crawling of specific file types or patterns
+# Disallow: /*.pdf$

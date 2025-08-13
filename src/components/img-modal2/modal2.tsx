@@ -71,11 +71,8 @@ export const Modal2 = () => {
         {currentImage && (
           <div className={styles.slide}>
             <picture>
-              <source
-                srcSet={currentImage.source.avif}
-                type="image/avif"
-              />
-              <img src={currentImage.source.jpg} loading="lazy" />
+              <source srcSet={currentImage.source.avif} type="image/avif" />
+              <img src={currentImage.source.jpg} fetchPriority="high" />
             </picture>
           </div>
         )}
